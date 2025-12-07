@@ -1,0 +1,172 @@
+export type Product = {
+  id: number;
+  name: string;
+  price: number;
+  weight: number;
+  stock: number;
+  description: string;
+  category: string;
+  image: string;
+};
+
+// Hardcode the products for now (you can move to JSON later)
+const productsData: Product[] = [
+  {
+    "id": 1,
+    "name": "Wireless Mouse",
+    "price": 7500,
+    "weight": 0.2,
+    "stock": 34,
+    "description": "High precision wireless mouse for everyday use",
+    "category": "Accessories",
+    "image": "/images/mouse.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Wireless Mouse Pro",
+    "price": 12000,
+    "weight": 0.25,
+    "stock": 22,
+    "description": "Advanced wireless mouse with programmable buttons",
+    "category": "Accessories",
+    "image": "/images/mouse-pro.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Gaming Wireless Mouse",
+    "price": 18500,
+    "weight": 0.3,
+    "stock": 16,
+    "description": "High-DPI gaming mouse with RGB lighting",
+    "category": "Gaming",
+    "image": "/images/mouse-gaming.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Mechanical Keyboard",
+    "price": 32000,
+    "weight": 1.2,
+    "stock": 10,
+    "description": "RGB backlit mechanical keyboard with blue switches",
+    "category": "Accessories",
+    "image": "/images/keyboard.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Compact Mechanical Keyboard",
+    "price": 28000,
+    "weight": 0.9,
+    "stock": 18,
+    "description": "Tenkeyless mechanical keyboard with red switches",
+    "category": "Accessories",
+    "image": "/images/keyboard-compact.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Wireless Mechanical Keyboard",
+    "price": 42000,
+    "weight": 1.4,
+    "stock": 8,
+    "description": "Bluetooth mechanical keyboard with brown switches",
+    "category": "Wireless",
+    "image": "/images/keyboard-wireless.jpg"
+  },
+  {
+    "id": 7,
+    "name": "USB-C Hub",
+    "price": 15000,
+    "weight": 0.4,
+    "stock": 18,
+    "description": "7-in-1 USB-C hub for laptops and tablets",
+    "category": "Adapters",
+    "image": "/images/hub.jpg"
+  },
+  {
+    "id": 8,
+    "name": "USB-C Hub Pro",
+    "price": 22000,
+    "weight": 0.5,
+    "stock": 12,
+    "description": "10-in-1 USB-C hub with 4K HDMI and Ethernet",
+    "category": "Adapters",
+    "image": "/images/hub-pro.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Portable USB-C Hub",
+    "price": 18000,
+    "weight": 0.3,
+    "stock": 25,
+    "description": "Slim 6-in-1 USB-C hub for travel",
+    "category": "Adapters",
+    "image": "/images/hub-portable.jpg"
+  },
+  {
+    "id": 10,
+    "name": "External Hard Drive (1TB)",
+    "price": 55000,
+    "weight": 0.9,
+    "stock": 7,
+    "description": "Portable 1TB external hard drive with USB 3.0",
+    "category": "Storage",
+    "image": "/images/hdd.jpg"
+  },
+  {
+    "id": 11,
+    "name": "External SSD (1TB)",
+    "price": 89000,
+    "weight": 0.3,
+    "stock": 5,
+    "description": "High-speed 1TB external SSD with USB-C",
+    "category": "Storage",
+    "image": "/images/ssd.jpg"
+  },
+  {
+    "id": 12,
+    "name": "External Hard Drive (2TB)",
+    "price": 72000,
+    "weight": 1.1,
+    "stock": 11,
+    "description": "Large capacity 2TB external hard drive",
+    "category": "Storage",
+    "image": "/images/hdd-2tb.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Bluetooth Headphones",
+    "price": 28000,
+    "weight": 0.35,
+    "stock": 15,
+    "description": "Noise-isolating wireless headphones with long battery life",
+    "category": "Audio",
+    "image": "/images/headphones.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Bluetooth Earbuds",
+    "price": 19000,
+    "weight": 0.1,
+    "stock": 28,
+    "description": "True wireless earbuds with charging case",
+    "category": "Audio",
+    "image": "/images/earbuds.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Noise Cancelling Headphones",
+    "price": 45000,
+    "weight": 0.4,
+    "stock": 9,
+    "description": "Premium over-ear headphones with active noise cancellation",
+    "category": "Audio",
+    "image": "/images/headphones-nc.jpg"
+  }
+];
+
+export function getAllProducts(): Product[] {
+  return productsData;
+}
+
+export function getProductById(id: number): Product | undefined {
+  return productsData.find((product) => product.id === id);
+}
